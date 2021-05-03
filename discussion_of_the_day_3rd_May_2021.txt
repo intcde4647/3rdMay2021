@@ -1,0 +1,167 @@
+https://www.masswerk.at/jsuix/index.html
+https://bellard.org/jslinux/vm.html?url=alpine-x86.cfg&mem=192
+https://www.tutorialspoint.com/unix/unix-basic-utilities.htm
+https://web.cs.wpi.edu/~rek/DCS/D04/UnixFileSystems.html#:~:text=The%20Unix%20file%20system%20allocates,pointers%20to%20the%20data%20blocks.
+
+https://www.tutorialspoint.com/unix/unix-io-redirections.htm
+https://www.tutorialspoint.com/unix/unix-pipes-filters.htm
+https://www.geeksforgeeks.org/essential-linuxunix-commands/
+https://www.geeksforgeeks.org/basic-shell-commands-in-linux/
+
+
+
+--------------------------------------------------------------------
+Shell scripting
+-------------------
+ls/dir =========> listing 
+cd =============> change directory
+mkdir ==========> make a directory or folder
+pwd ============> print working directory
+
+
+   UNIX or Linux=======> Shell ====> Command Interpreter
+      |
+      |
+     Kernel ( System calls)
+      |
+      |
+    Hardware
+----------------------------------------------------------------
+ls -l ( -l option / attribute)
+
+long losting output will be in the form of 9 columns.
+
+1 st column is broken up into 10 sub columns.
+
+  - file
+  d folder
+  rwx =====> user
+  rwx =====> group
+  rwx =====> others
+----------------------------------------------------------------------------------------
+
+ls -a =====> hidden file ( The file names which are starting with . )
+ls -la ====> long listing and the hidden files .......
+
+---------------------------------------------------------------------------------------------------------
+mkdir ======> creating a folder or a directory
+
+
+
+mkdir -p dir1/dir2/dir3 ( Basically it will check whether we have the folder with the name given in the
+   path , if the folders are not existing it will go for creating the folders)
+--------------------------------------------------------------------------------------------------------------
+
+cd =====> change directory
+
+cd ======> will take us to our home directory
+cd .. =====> will take us to the immediate parent folder
+-----------------------------------------------------------------------------------------------------
+
+vi ( Visual editor )
+vi editor we work in 2 modes , 
+1) command mode
+2) insert mode
+
+after opening the vi editor with the filename , when we are trying to type anything we are not able to write. so we have to change to insert mode by pressing <esc>+i
+after writing something we have to save and quit
+so again we have to change the mode from insert to command mode, again we are going to press <esc>
+and :wq ( write and quit )
+
+----------------------------------------------------------------------------------------------
+
+after opening the vi editor ( Without the file name )    
+
+--------------------------------------------------------------------------
+while writing the script , 
+echo =====> to print just like printf in C or System.out.println in Java
+---------------------------------------------------------------------------------------------------
+accepting a value from user.
+
+userinput.sh
+
+echo "Enter a name"
+read name
+echo "The entered name is $name"
+
+
+------------------------------------------------------------------------------------------------------
+sum.sh
+
+echo "Enter the first number"
+read num1
+echo "Enter the second number"
+read num2
+result=`expr $num1 + $num2`
+echo "The sum is $result"
+---------------------------------------------------------------------------------------------------------
+
+Suppose you want to compare the number 
+
+  = -eq
+  > -gt
+  >= -ge
+  < -lt
+  <= le
+  != ne
+
+   && and ||
+
+ Suppose if the nunmbers entered are greater than 0 , then only perform the addition of numbers
+
+   echo "Enter the number1"
+   read number1
+   echo "Enter the number2"
+   read number2
+   if [ $num1 -gt 0 && $num2 -gt 0 ]
+   then
+   result=`expr $num1 + $num2`
+   else
+   echo "Both the number should be positive"
+   fi
+-------------------------------------------------------------------------------------------------------
+
+  -d [ to check argument is a folder or not ]
+  -f [ to check whether it is a file or not ]
+
+Let us accept a string from user and check whether it is file or a folder.
+
+    echo "Enter a name"
+    read name
+    if [ -f $name ] 
+    then
+     echo "It is a file"
+    elif [ -d $name ]
+    then 
+     echo "It is a folder"
+    else
+     echo "It is not exisiting"
+    fir
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
